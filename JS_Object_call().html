@@ -1,0 +1,19 @@
+<!-- With call(), an object can use a method belonging to another object. -->
+
+<script>
+var person = {
+			fullName: function() {
+						return this.firstName + " " + this.lastName;
+						}
+			}
+var person1 = {
+		firstName:"Jack",
+		lastName: "Tony"
+		}
+var person2 = {
+  firstName:"Jill",
+  lastName: "Doe"
+}
+var x = person.fullName.call(person1); //person1 obj accesses fullName function of person obj
+document.write(x);
+</script>

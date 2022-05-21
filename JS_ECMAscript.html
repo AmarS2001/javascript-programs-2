@@ -1,0 +1,20 @@
+<!--Classes introduced in 2015 ECMAscript-->
+<script>
+	class item
+		{
+		constructor(name,price)
+			{
+			this.iname=name;
+			this.iprice=price;
+			}
+			show()
+			{
+			document.write("Item name:"+ this.iname+" Item price: "+this.iprice+"<br>");
+			}
+		}
+		
+	let itemobj= new item("Samsung",20000); // call for the constructor
+	itemobj.show();
+	let itemvar= new item("Motorola",50000);
+	itemvar.show();
+</script>

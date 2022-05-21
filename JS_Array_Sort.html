@@ -1,0 +1,27 @@
+<!--Syntax:
+function compare(a,b) {  // ...}
+The compare() function accepts two arguments a and b. The sort() method will sort elements based on the return value of the compare() function with the following rules:
+1. If compare(a,b) < 0; the sort() method sorts a to a lower index than b. In other words, a will come first.
+2. If compare(a,b) > 0; the sort() method sort b to a lower index than a, i.e., b will come first.
+eg: if(4>3) = true ; true(1) is greater than 0; sort will place 3 in the lower index and 4 later. [3,4]
+3. If compare(a,b) == 0 ; returns zero, the sort() method considers a equals b and leaves their positions unchanged.
+return a-b; eg:a=40,b=90 -> 40-90=-50; -50<0 ; hence a will be in the lower index.
+			eg:a=50,b=30 -> 50-30=20; 20>0; hence b moves to the lower index.
+			eg:a=15,b=15 -> 15-15=0; 0==0; hence no change happens in the position.
+ -->
+<script>
+let arr=[1,2,11,12,8,20];
+arr.sort();
+console.log(arr);
+function comp(a,b)
+{
+return a-b;
+/*if(a>b)
+	return 1;
+if(a<b)
+	return -1;
+if(a==b)
+	return 0;*/
+}
+console.log(arr.sort(comp));
+</script>

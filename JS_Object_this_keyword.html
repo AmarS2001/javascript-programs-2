@@ -1,0 +1,19 @@
+<!--
+The JavaScript this keyword refers to the object it belongs to...
+
+Always it refers to an object.
+
+-->
+<script>
+// Create an object:
+var person = {
+  firstName: "Zion",
+  lastName : "Peter",
+  id     : 55,
+  fullName : function() {
+				return this.firstName + " " + this.lastName;
+						}
+};
+
+document.write(person.fullName());
+</script>

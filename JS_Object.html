@@ -1,0 +1,28 @@
+<!--Objects in JS - Compared to real life objects
+Objects has properties and type. EX: A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. 
+in the same way, JavaScript objects can have properties, which define their characteristics.
+Three ways to create objects.
+1. Define and create a single object, using an object literal.
+2. Define and create a single object, with the keyword new.
+3. Define an object constructor, and then create objects of the constructed type.
+key:value pairs
+-->
+
+<script>
+/*var myCar = new Object(); 
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+document.write(myCar.make+" --- Year of make is " + myCar.year); // access by . or []*/
+
+var myCar = {
+    make: 'Ford',
+    model: 'Mustang',
+    year: 1969
+	};
+	document.write("The make of the car is "+ myCar.make+" and the year is " + myCar["year"]); 
+	
+let newobj={} // null object creation
+newobj.car="ford"
+
+</script>

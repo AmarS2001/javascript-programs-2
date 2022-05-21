@@ -1,0 +1,30 @@
+<!--
+1. Define an object constructor, and then create objects of the constructed type; called when obj created.
+2. Any number of objects can be created.Eg:book,book2,etc.,
+3. Adding a function to a constructor is valid.
+4. Cannot add a new property to an existing object : Eg: book_item.Year=2019 is not allowed.
+5. To add a new property or method, you must add it to the constructor function:
+-->
+<script>
+function book_item(title,author,available_copies,yop) // object constructor
+{
+this.title=title;
+this.author=author;
+this.available_copies=available_copies;
+//add a function
+this.borrow=function()
+		{
+		this.available_copies++;
+		}
+this.YOP=yop;
+}
+
+let book=new book_item("Java","Tom",45,2019);	//object for book_item;object constructor is called
+//book_item.YOP=2019; // not valid
+//book.borrow();
+document.write("Title:"+book.title+" and the Copies available: "+book.available_copies+"<br>");
+
+let book2=new book_item("PHP","Dave",12);	//2nd for object book_item	
+book2.borrow();
+document.write("Title:"+book2.title+" and the Copies available: "+book2.available_copies);
+</script>

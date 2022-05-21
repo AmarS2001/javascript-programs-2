@@ -1,0 +1,22 @@
+
+<script>
+let book={
+	title:"Javascript",
+	author:"Sheela",
+	copies_available:20,
+		};
+let book2={
+	title:"Javascript",
+	author:"Sheela",
+	copies_available:20,
+	borrow:function()
+			{
+			this.copies_available--;
+			}
+		};	
+
+book2.borrow();
+//book.borrow(); not correct
+document.write("The book "+book.title+"	written by"+book.author+"has "+book.copies_available+"available copies<br/>");
+document.write("The book "+book2.title+"written by"+book2.author+"has "+book2.copies_available+"available copies");	
+</script>
